@@ -10,11 +10,11 @@ $recipeIng = $_GET['recipeIngredients'];
 $recipeIns = $_GET['recipeInstructions'];
 $user_id = $_SESSION['userid'];
 
-$sql_Statement = "INSERT INTO `recipes_table` (`id`, `recipe_title`, `recipe_ingredients`, `recipe_instructions`) VALUES ('$user_id', '$recipeTitle', '$recipeIng', '$recipeIns');"
+$sql_Statement = "INSERT INTO `recipes_table` (`recipe_title`, `recipe_ingredients`, `recipe_instructions`) VALUES ('$recipeTitle', '$recipeIng', '$recipeIns')";
 
 
 if ($connection) {
-	$result = mysqli_query($connection, $sql_statement);
+	$result = mysqli_query($connection, $sql_Statement);
 	if ($result) {
 		echo "Recipe Added Successfully";
 		echo "click <a href='index.php'>here</a> to return";

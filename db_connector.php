@@ -10,3 +10,5 @@ $dbname = "recipelists";
 
 // Create connection
 $connection = mysqli_connect($servername, $username, $password, $dbname);
+
+?>
