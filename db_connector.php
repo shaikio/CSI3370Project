@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "your_cookbook";
+$dbname = "recipelists";
 
 // Create connection
 $connection = mysqli_connect($servername, $username, $password, $dbname);
