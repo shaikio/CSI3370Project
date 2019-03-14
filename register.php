@@ -24,3 +24,7 @@
 }
 	mysqli_close($selected);
 ?>
+
+<!--
+This page manages the register logic between the database and the site for register purposes.
+!-->

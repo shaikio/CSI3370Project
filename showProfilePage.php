@@ -101,3 +101,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout</a></span>
 </div>
 </body>
 </html>
+
+<!--
+This page manages the GUI for the profile page, as well as the localstorage.
+!-->

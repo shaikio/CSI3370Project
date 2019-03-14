@@ -29,3 +29,6 @@
     require_once 'showMainWelcome.php';
 ?>
 
+<!--
+This code is the first page viewed when visiting the site. It should not be changed. All of its code will show up on other pages if anything is added.
+!-->

@@ -28,3 +28,7 @@ else {
 }
 
 ?>
+
+<!--
+This page manages the addition of items logic between the database and the site for recipe adding purposes.
+!-->

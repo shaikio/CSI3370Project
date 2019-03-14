@@ -33,3 +33,7 @@ else {
     exit;
 }
 ?>
+
+<!--
+This page manages the login logic between the database and the site for login purposes.
+!-->
