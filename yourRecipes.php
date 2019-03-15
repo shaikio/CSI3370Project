@@ -60,6 +60,8 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
     echo "<tr><td>" . $row['recipe_title'];
 	echo "<td>" . $row['recipe_ingredients'];
 	echo "<td>" . $row['recipe_instructions'];
+	echo "<td>" . $row['id'];
+	echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
 }
 echo '</table>';
 } else { echo '0 results'; }
