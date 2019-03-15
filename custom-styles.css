@@ -184,8 +184,6 @@ body {
 	font-size: 30px;
 }
 
-<<<<<<< HEAD
-=======
 #table-page-top {
 	position: fixed;
 	width: 1700px;
@@ -193,11 +191,10 @@ body {
 }
 
 #recipe-table-listing {
-	margin-top: 100px;
+	margin-top: 130px;
 	position: absolute;
 }
 
->>>>>>> TableAdded
 .register-box {
 	padding-top: 60px;
 	padding-bottom: 60px;

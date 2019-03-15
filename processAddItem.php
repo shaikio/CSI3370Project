@@ -1,8 +1,5 @@
 <?php 
-
-
 session_start();
-
 require_once 'db_connector.php';
 
 $recipeTitle = $_GET['recipeTitle'];
@@ -11,13 +8,12 @@ $recipeIns = $_GET['recipeInstructions'];
 $user_id = $_SESSION['userid'];
 
 $sql_Statement = "INSERT INTO `recipes_table` (`recipe_title`, `recipe_ingredients`, `recipe_instructions`) VALUES ('$recipeTitle', '$recipeIng', '$recipeIns')";
-
+echo '<script type="text/javascript">alert("Recipe added successfully!");</script>';
 
 if ($connection) {
 	$result = mysqli_query($connection, $sql_Statement);
 	if ($result) {
-		echo "Recipe Added Successfully";
-		echo "click <a href='showAddForm.php'>here</a> to return";
+		include('showAddForm.php');
 	}
 	else {
 		echo "Error inserting recipe" . mysqli_error($connection);
@@ -26,7 +22,6 @@ if ($connection) {
 else {
 	echo "Error connecting" . mysqli_connect_error();
 }
-
 ?>
 
 <!--

@@ -44,7 +44,6 @@
  <table>
  <tr>
   <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th>
- 
  </tr>
  <?php
 $conn = mysqli_connect("localhost", "root", "", "recipelists");
