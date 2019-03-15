@@ -25,6 +25,7 @@
 	color: black;
 	}
   tr:nth-child(even) {background-color: #f2f2f2}
+  td:last-child {background-color: grey}
  </style>
 </head>
 <body>
@@ -45,26 +46,29 @@
  <tr>
   <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th>
  </tr>
- <?php
+<?php
 $conn = mysqli_connect("localhost", "root", "", "recipelists");
-  // Check connection
-  if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-  } 
-  $sql = "SELECT * FROM recipes_table";
-  $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
-   // output data of each row
-   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row['recipe_title'];
-	echo "<td>" . $row['recipe_ingredients'];
-	echo "<td>" . $row['recipe_instructions'];
+ // Check connection
+ if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+ }
+ $sql = "SELECT * FROM recipes_table";
+ $result = $conn->query($sql);
+ if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+   echo "<tr><td>" . $row['recipe_title'];
+    echo "<td>" . $row['recipe_ingredients'];
+    echo "<td>" . $row['recipe_instructions'];
+    echo "<td>" . $row['id'];
+    echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
+	
 }
 echo '</table>';
 } else { echo '0 results'; }
-
 $conn->close();
 ?>
+
 </table>
 </div>
 </body>
