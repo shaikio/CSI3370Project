@@ -1,0 +1,252 @@
+* {
+	font-family:helvetica;
+}
+
+#save-profile {
+	border-radius: 20px;
+	background-color: green;
+}
+
+.search-or-add-button {
+	margin-top: 10px;
+	background-color: green;
+	border-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+#topmost-part {
+	background-color: black;
+	padding-bottom: 1px;
+}
+
+#age-label {
+	margin-right: 32px;
+}
+
+#gender-label {
+	margin-right: 30px;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+	
+a:hover {
+	background-color: green;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+body {
+	background-color: tan;
+}
+#register-button {
+	background-color: black;
+}
+
+#index {
+	color: black;
+}
+
+#index-login {
+	padding-bottom: 40px;
+}
+
+.profile-grid {
+	display: inline-grid;
+	grid-template-areas: 'biography gender'
+						 'age cookingexperience'
+						 'favoriterecipes favoriterecipes'
+						 'submitrecipes submitrecipes';
+	grid-template-rows: auto auto auto auto;
+	margin-left: 500px;
+	background-color: grey;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 30px;
+}
+
+.profileitem1 {
+	grid-area: biography;
+	margin-top: 20px;
+}
+
+.profileitem2 {
+	grid-area: gender;
+		margin-top: 90px;
+		margin-left: 50px;
+}
+
+.profileitem3 {
+	grid-area: age;
+		margin-top: 20px;
+		margin-left: 50px;
+}
+
+.profileitem4 {
+	grid-area: cookingexperience;
+		margin-top: 20px;
+		margin-left: 50px;
+}
+
+.profileitem5 {
+	grid-area: favoriterecipes;
+		margin-top: 20px;
+		margin-left: 65px;
+}
+
+.profileitem6 {
+	grid-area: submitrecipes;
+		margin-top: 20px;
+		margin-left: 80px;
+}
+
+.login {
+	color: white;
+	text-align: right;
+}
+
+
+.login-textbox {
+	margin-bottom: 10px;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+.login-button {
+	font-size: 12px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left: 20px;
+	margin-right: 25px;
+	margin-top: 14px;
+	font-weight: bold;
+	background-color: green;
+	border-radius: 40px;
+}
+
+.login-grid {
+	display: grid;
+	grid-template-areas: 'username username',
+						 'password password',
+						 'login register';		
+	grid-template-rows: 30px 30px 30px;
+	margin-top: -65px;
+	background-color: black;
+}
+
+.item1 {
+	grid-area: username;
+}
+
+.item2 {
+	grid-area: password;
+}
+
+.item3 {
+	grid-area: login;
+}
+
+.item4 {
+	grid-area: register;
+}
+
+.search-textbox {
+	font-size: 30px;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.search-textbox-register {
+	font-size: 30px;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 550px;
+}
+
+#form-container {
+	text-align: center;
+	font-size: 30px;
+}
+
+.register-box {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.register-box-overall {
+	background-color: grey;
+	text-align: center;
+	font-size: 30px;
+}
+
+#register-box-overall1 {
+	background-color: black;
+}
+
+#after-login-heading {
+	color: green;
+	padding-top: 15px;
+}
+
+button {
+	font-size:2em;
+	padding:5px;
+	border-radius:10px;
+	box-shadow:3px 3px;
+}
+            
+.input-span {
+        display: block;
+        overflow: hidden;
+        padding-right: 5px;
+        padding-left: 10px;
+}
+                   
+span > input{ 
+ 	width: 100%;
+ 	font-size:1.2em;
+}
+
+.profile-label {
+	font-family: "Garamond", serif;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+}
+
+#favorite-food-label {
+	font-family: "Garamond", serif;
+	font-size: 30px;
+	display: block;
+	margin-left: 10px;
+}
+
+.profile-textarea {
+	font-family: "Garamond", serif;
+	display: block;
+}
+  
+.menu-container {
+  	color:#EEE;
+  	background-color:#222;
+  	padding:6px;
+  	font-size:1.5em;
+}
