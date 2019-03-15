@@ -13,6 +13,7 @@
 <div id="topmost-part"> <h1 id="after-login-heading"> Make Your Cookbook </h1> </div>
 <div class="menu-container">
 <span class="menu-item"> Welcome, <?php
+session_start();
 echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 | <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
  <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |

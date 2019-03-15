@@ -1,11 +1,9 @@
 <?php 
-session_start();
 require_once 'db_connector.php';
 
 $recipeTitle = $_GET['recipeTitle'];
 $recipeIng = $_GET['recipeIngredients'];
 $recipeIns = $_GET['recipeInstructions'];
-$user_id = $_SESSION['userid'];
 
 $sql_Statement = "INSERT INTO `recipes_table` (`recipe_title`, `recipe_ingredients`, `recipe_instructions`) VALUES ('$recipeTitle', '$recipeIng', '$recipeIns')";
 echo '<script type="text/javascript">alert("Recipe added successfully!");</script>';
