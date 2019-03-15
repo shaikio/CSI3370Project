@@ -15,9 +15,9 @@ This is a partial page.  The purpose is to (1) Start the HTML page (2) set the C
 <span class="menu-item"> Welcome, <?php
 session_start();
 echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
-| <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
- <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span>
- <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |
+| <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item">
+ <span class="menu-item"><a href="showSearchForm.php"> Search </a></span> |
+ <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> | 
  <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span>
 </div>
 
