@@ -17,7 +17,7 @@ if ($connection) {
 	$result = mysqli_query($connection, $sql_Statement);
 	if ($result) {
 		echo "Recipe Added Successfully";
-		echo "click <a href='index.php'>here</a> to return";
+		echo "click <a href='showAddForm.php'>here</a> to return";
 	}
 	else {
 		echo "Error inserting recipe" . mysqli_error($connection);
