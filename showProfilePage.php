@@ -4,7 +4,11 @@ This is a partial page.  The purpose is to (1) Start the HTML page (2) set the C
  -->
 
 <html>
+<<<<<<< HEAD
 	<title>Your Cookbook</title>
+=======
+	<title> Profile Page </title>
+>>>>>>> TableAdded
 <head>
 	<link rel="stylesheet" type="text/css" href="custom-styles.css">
 </head>
@@ -14,9 +18,16 @@ This is a partial page.  The purpose is to (1) Start the HTML page (2) set the C
 <div class="menu-container">
 <span class="menu-item"> Welcome, <?php
 session_start();
+<<<<<<< HEAD
 echo $_SESSION['username']; ?>. <a href="logout.php"> Logout</a></span>
 | <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
  <span class="menu-item"><a href="showAddForm.php"> Add New Recipe</a></span>
+=======
+echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
+| <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
+ <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |
+ <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span>
+>>>>>>> TableAdded
 </div>
 
 <div class="profile-grid">
