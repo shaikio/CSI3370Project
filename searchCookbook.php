@@ -13,7 +13,6 @@ if ($connection) {
 	$result = mysqli_query($connection, $sql_statement);
 	if ($result) {
 			while ($row = mysqli_fetch_assoc($result)) {
-				echo "recipe id " . $row['id'] . "<br>";
 				echo "recipe title " . $row['recipe_title'] . "<br>";
 				echo "recipe ingredients " . $row['recipe_ingredients'] . "<br>";
 				echo "recipe instructions " . $row['recipe_instructions'] . "<br>";
