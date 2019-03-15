@@ -25,7 +25,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 		
 		<label for="add-recipe-instructions"> Recipe Instructions: </label>
 		<textarea name="recipeInstructions" class="search-textbox" id="add-recipe-instructions"></textarea><br>
-		<button type="submit" class="search-or-add-button">Add</button>
+		<button type="submit" class="search-or-add-button"> Search </button>
 	</form>
 </form>
 </div>
