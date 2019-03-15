@@ -14,7 +14,7 @@ $sql = 'DELETE FROM recipes_table WHERE id = $id';
 
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);
-    header(Location: yourRecipes.php); 
+    header('Location: yourRecipes.php'); 
     exit;
 } else {
     echo "Error deleting record";
