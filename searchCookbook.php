@@ -71,10 +71,10 @@ if ($connection) {
 				echo '<h2> Your Results (If Any) </h2>';
 			while ($row = mysqli_fetch_assoc($result)) {
 				echo '<div id="table-of-results">';
-				echo "recipe id " . $row['id'] . "<br>";
-				echo "recipe title " . $row['recipe_title'] . "<br>";
-				echo "recipe ingredients " . $row['recipe_ingredients'] . "<br>";
-				echo "recipe instructions " . $row['recipe_instructions'] . "<br>";
+				echo "Recipe ID: " . $row['id'] . "<br>";
+				echo "Recipe Title: " . $row['recipe_title'] . "<br>";
+				echo "Recipe Ingredients: " . $row['recipe_ingredients'] . "<br>";
+				echo "Recipe Instructions: " . $row['recipe_instructions'] . "<br>";
 				echo "-----------------------<br>";
 				echo '</div>';
 			}	
