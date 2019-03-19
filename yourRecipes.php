@@ -44,7 +44,7 @@
 <div id="recipe-table-listing">
  <table>
  <tr>
-  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th>
+  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> ID </th> <th> Delete Recipe </th> 
  </tr>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "recipelists");
