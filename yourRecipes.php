@@ -78,6 +78,9 @@ function myFunction() {
 	var newtitle = prompt("Hello, what should the new recipe title be?", currentrecipetitle);
 	var newingredients = prompt("Hello, what should the new recipe ingredients be?", currentrecipeingredients);
 	var newinstructions = prompt("Hello, what should the new recipe instructions be?", currentrecipeinstructions);
+	document.cookie = "title=" + newtitle;
+	document.cookie = "ingredients= " + newingredients;
+	document.cookie = "instructions=" + newinstructions;
 }
 </script>
 
