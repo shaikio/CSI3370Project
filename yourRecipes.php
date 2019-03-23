@@ -24,8 +24,9 @@
 	border: 2px solid black;
 	color: black;
 	}
-  tr:nth-child(even) {background-color: #f2f2f2}
-  td:last-child {background-color: grey}
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  td:last-child {background-color: grey; text-align: center;}
+  td:nth-last-child(2) {background-color: grey; text-align: center;}
  </style>
 </head>
 <body>
@@ -44,7 +45,7 @@
 <div id="recipe-table-listing">
  <table>
  <tr>
-  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> ID </th> <th> Delete Recipe </th> 
+  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> Delete Recipe </th> <th> Edit Recipe </th>
  </tr>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "recipelists");
@@ -57,11 +58,11 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
  if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-   echo "<tr><td>" . $row['recipe_title'];
+	echo "<tr><td>" . $row['recipe_title'];
     echo "<td>" . $row['recipe_ingredients'];
     echo "<td>" . $row['recipe_instructions'];
-    echo "<td>" . $row['id'];
     echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
+    echo "<td><a href='update.php?id=". $row['id']."'>Update</a></td>";	
 	
 }
 echo '</table>';
