@@ -58,19 +58,31 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
  if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-	echo "<tr><td>" . $row['recipe_title'];
-    echo "<td>" . $row['recipe_ingredients'];
-    echo "<td>" . $row['recipe_instructions'];
+	echo "<tr><td id='title'>" . $row['recipe_title'];
+    echo "<td id='ingredients'>" . $row['recipe_ingredients'];
+    echo "<td id='instructions'>" . $row['recipe_instructions'];
     echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
-    echo "<td><a href='update.php?id=". $row['id']."'>Update</a></td>";	
-	
+    echo "<td><a onclick='myFunction()' href='update.php?id=". $row['id']."'>Update</a></td>";	
 }
+
 echo '</table>';
 } else { echo '0 results'; }
 $conn->close();
 ?>
 
+<script>
+function myFunction() {
+	var currentrecipetitle = document.getElementById("title").innerHTML;
+	var currentrecipeingredients = document.getElementById("ingredients").innerHTML;
+	var currentrecipeinstructions = document.getElementById("instructions").innerHTML;
+	var newtitle = prompt("Hello, what should the new recipe title be?", currentrecipetitle);
+	var newingredients = prompt("Hello, what should the new recipe ingredients be?", currentrecipeingredients);
+	var newinstructions = prompt("Hello, what should the new recipe instructions be?", currentrecipeinstructions);
+}
+</script>
+
 </table>
 </div>
 </body>
 </html>
+<!-- Display all recipes, and allow them to be changed. --->
