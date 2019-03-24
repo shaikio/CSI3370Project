@@ -43,7 +43,7 @@
 </div>
 
 <div id="recipe-table-listing">
- <table>
+ <table id="recipe-table">
  <tr>
   <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> Delete Recipe </th> <th> Edit Recipe </th>
  </tr>
@@ -55,6 +55,7 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
  }
  $sql = "SELECT * FROM recipes_table";
  $result = $conn->query($sql);
+ $counter = 1;
  if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
@@ -62,22 +63,20 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
     echo "<td id='ingredients'>" . $row['recipe_ingredients'];
     echo "<td id='instructions'>" . $row['recipe_instructions'];
     echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
-    echo "<td><a onclick='myFunction()' href='update.php?id=". $row['id']."'>Update</a></td>";	
+    echo "<td id='update' onclick='myFunction($counter)'><a href='update.php?id=". $row['id']."'>Update</a></td>";
+	$counter++;
 }
-
 echo '</table>';
 } else { echo '0 results'; }
 $conn->close();
 ?>
 
 <script>
-function myFunction() {
-	var currentrecipetitle = document.getElementById("title").innerHTML;
-	var currentrecipeingredients = document.getElementById("ingredients").innerHTML;
-	var currentrecipeinstructions = document.getElementById("instructions").innerHTML;
-	var newtitle = prompt("Hello, what should the new recipe title be?", currentrecipetitle);
-	var newingredients = prompt("Hello, what should the new recipe ingredients be?", currentrecipeingredients);
-	var newinstructions = prompt("Hello, what should the new recipe instructions be?", currentrecipeinstructions);
+function myFunction(variable) {
+	var mytable = document.getElementById("recipe-table");
+	var newtitle = prompt("Hello, what should the new recipe title be?", mytable.rows[variable].cells[0].innerHTML);
+	var newingredients = prompt("Hello, what should the new recipe ingredients be?", mytable.rows[variable].cells[1].innerHTML);
+	var newinstructions = prompt("Hello, what should the new recipe instructions be?", mytable.rows[variable].cells[2].innerHTML);
 	document.cookie = "title=" + newtitle;
 	document.cookie = "ingredients= " + newingredients;
 	document.cookie = "instructions=" + newinstructions;
