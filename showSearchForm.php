@@ -12,7 +12,8 @@ session_start();
 echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 | <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
  <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |
- <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span>
+ <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span> |
+    <span class="menu-item"><a href="image.php"> Gallery of Cooked Recipes </a></span>
 </div>
 <div id="form-container">
 <h2>Search for a recipe</h2>
