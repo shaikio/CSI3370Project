@@ -65,7 +65,7 @@
 </style>
 </head>
 <body>
-    <div id="table-page-top">
+    
 	<div id="topmost-part"> <h1 id="after-login-heading"> Make Your Cookbook </h1> </div>
 		<div class="menu-container">
 			<span class="menu-item"> Welcome, <?php
@@ -75,8 +75,11 @@
 			 <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |
 			 <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span>
 		</div>
-</div>
+<div>
+    
+        <tr>
 <div id="content">
+    
   <?php
     while ($row = mysqli_fetch_array($result)) {
       echo "<div id='img_div'>";
@@ -102,6 +105,9 @@
   		<button type="submit" name="upload">POST</button>
   	</div>
   </form>
-</div>
+    </div>
+        </tr>
+    
+        </div>
 </body>
 </html>

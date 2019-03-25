@@ -19,7 +19,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 <h2>Search for a recipe</h2>
 	<form action="searchCookbook.php">
 		<label for="add-recipe-title"> Recipe Title: </label>
-		<input type="text" name="recipeName" class="search-textbox" id="add-recipe-title"></input><br>
+		<input type="text" name="recipeName" class="search-textbox" id="add-recipe-title"><br>
 		
 		<label for="add-recipe-ingredients"> Recipe Ingredients: </label>
 		<textarea name="recipeIngredients" class="search-textbox" id="add-recipe-ingredients"></textarea><br>
@@ -27,7 +27,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 		<label for="add-recipe-instructions"> Recipe Instructions: </label>
 		<textarea name="recipeInstructions" class="search-textbox" id="add-recipe-instructions"></textarea><br>
 		<button type="submit" class="search-or-add-button"> Search </button>
-	</form>
+	
 </form>
 </div>
 </body>
