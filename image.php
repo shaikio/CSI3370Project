@@ -73,7 +73,8 @@
 			echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 			| <span class="menu-item"><a href="showProfilePage.php"> Profile </a> </span> | <span class="menu-item"><a href="showSearchForm.php"> Search </a> </span> |
 			 <span class="menu-item"><a href="showAddForm.php"> Add New Recipe </a></span> |
-			 <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span>
+			 <span class="menu-item"><a href="yourRecipes.php"> Your Recipes </a></span> |
+            <span class="menu-item"><a href="image.php"> Gallery of Cooked Recipes </a></span>
 		</div>
 <div>
     
@@ -85,6 +86,7 @@
       echo "<div id='img_div'>";
       	echo "<img src='images/".$row['image']."' >";
       	echo "<p>".$row['image_text']."</p>";
+        echo "<td><a href='delete_image.php?id=". $row['id']."'>Delete</a></td>";
       echo "</div>";
     }
   ?>
