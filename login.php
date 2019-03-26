@@ -19,7 +19,8 @@ if ($connection) {
             header('Location: showTopMenu.php');
         }
         else {
-            echo "Login unsuccessful<br>";
+			echo "<script> alert('Login unsuccessful!')</script>";
+			include('index.php');
             exit;
         }
     }
