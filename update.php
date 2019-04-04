@@ -1,9 +1,6 @@
 <?php
 
 $id = $_GET['id'];
-
-echo("<script type='text/javascript'> prompt('What should its new recipe name be?', 'name here'); </script>");
-
 $title = $_COOKIE["title"];
 $ingredients = $_COOKIE["ingredients"];
 $instructions = $_COOKIE["instructions"];
