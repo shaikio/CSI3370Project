@@ -25,8 +25,9 @@
 	color: black;
 	}
   tr:nth-child(even) {background-color: #f2f2f2;}
-  td:last-child {background-color: grey; text-align: center;}
+  td:last-child {background-color: grey; text-align: center; color: white;}
   td:nth-last-child(2) {background-color: grey; text-align: center;}
+  td:nth-last-child(3) {background-color: grey; text-align: center;}
  </style>
 </head>
 <body>
@@ -46,7 +47,7 @@
 <div id="recipe-table-listing">
  <table id="recipe-table">
  <tr>
-  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> Delete Recipe </th> <th> Edit Recipe </th>
+  <th>Recipe Name</th> <th> Recipe Ingredients </th> <th> Recipe Instructions </th> <th> Delete Recipe </th> <th> Edit Recipe </th> <th> Favorite Status </th>
  </tr>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "recipelists");
@@ -65,6 +66,7 @@ $conn = mysqli_connect("localhost", "root", "", "recipelists");
     echo "<td id='instructions'>" . $row['recipe_instructions'];
     echo "<td><a href='delete.php?id=". $row['id']."'>Delete</a></td>";
     echo "<td id='update' onclick='myFunction($counter)'><a href='update.php?id=". $row['id']."'>Update</a></td>";
+	echo "<td onclick='myFunction2($counter)'><a href='favorite.php?id=" . $row['id']."'><input type='radio' id='favorite'>(Un)Favorite</a></input></td>";
 	$counter++;
 }
 echo '</table>';
@@ -82,6 +84,24 @@ function myFunction(variable) {
 	document.cookie = "ingredients= " + newingredients;
 	document.cookie = "instructions=" + newinstructions;
 }
+
+function myFunction2(variable) {
+	var favorite = document.getElementById("favorite");
+	if (favorite.checked) {
+		localStorage.setItem("favorite", "1");
+	} else {
+		localStorage.setItem("favorite", "0");
+	}
+	document.cookie = "favorite_status=" + favorite;
+}
+
+	window.onload = function() {
+			if (localStorage.getItem("favorite") === "1") {
+				document.getElementById("favorite").checked = false;
+			} else {
+				document.getElementById("favorite").checked = true;
+			}
+}	
 </script>
 
 </table>

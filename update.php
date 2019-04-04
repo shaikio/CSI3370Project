@@ -1,5 +1,4 @@
 <?php
-
 $id = $_GET['id'];
 $title = $_COOKIE["title"];
 $ingredients = $_COOKIE["ingredients"];
