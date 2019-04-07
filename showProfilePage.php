@@ -101,7 +101,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout</a></span>
 		document.getElementById("profile-selector").selectedIndex = localStorage.getItem("choice");
 		}
 	</script>
-</div>
+
 </body>
 </html>
 
