@@ -9,16 +9,16 @@
 	<form class="login-grid" id="index-login" action="login.php">
 		<div class="login">
 			<div class="item1">
-				Username: <input name="login-name" class="login-textbox" id="username"> </input>
+				Username: <input name="login-name" class="login-textbox" id="username">
 			</div>
 			
 			<div class="item2">
-				Password: <input type="password" name="login-password" class="login-textbox" id="password"> </input>
+				Password: <input type="password" name="login-password" class="login-textbox" id="password">
 			</div>
 			
 			<div class="item3">
 				<button class="login-button" id="login-button" > Login </button>
-				<a href="register.html" id="register-button"> <input type="button" name="Register" value= "Register" class="login-button" id="register"> </input> </a>
+				<a href="register.html" id="register-button"> <input type="button" name="Register" value= "Register" class="login-button" id="register"> </a>
 			</div>
 		</div>
 	</form>

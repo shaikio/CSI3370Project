@@ -25,7 +25,7 @@ echo $_SESSION['username']; ?>. <a href="logout.php"> Logout </a></span>
 	<p>Fill out all of the fields and submit</p>
 	<form action="processAddItem.php">
 		<label for="add-recipe-title"> Recipe Title: </label>
-		<input type="text" name="recipeTitle" class="search-textbox id="add-recipe-title"></input><br>
+		<input type="text" name="recipeTitle" class="search-textbox" id="add-recipe-title"><br>
 		
 		<label for="add-recipe-ingredients"> Recipe Ingredients: </label>
 		<textarea name="recipeIngredients" class="search-textbox" id="add-recipe-ingredients"></textarea><br>
